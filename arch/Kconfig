@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: GPL-2.0
+	# SPDX-License-Identifier: GPL-2.0
 #
 # General architecture dependent options
 #
@@ -704,7 +704,10 @@ config LLVM_POLLY
 	  This option enables LLVM's polyhedral loop optimizer known as Polly.
 	  Polly is able to optimize various loops throughout the kernel for
 	  maximum cache locality. This requires an LLVM toolchain explicitly
-	  compiled with Polly support.	  
+	  compiled with Polly support.
+	  
+config GCC_GRAPHITE
+	bool "Enable GCC's optimizations using the polyhedral model (Graphite)"	  
 
 config ARCH_SUPPORTS_SHADOW_CALL_STACK
 	bool
